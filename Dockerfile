@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 # Install dependencies
 RUN apt update && \
-    apt install -y curl wget python3 ca-certificates && \
+    apt install -y curl wget tmate python3 ca-certificates && \
     apt clean
 
 # Download and install sshx directly
@@ -17,4 +17,4 @@ EXPOSE 8080
 
 # Start dummy HTTP server and sshx (foreground process)
 CMD python3 -m http.server 8080 & \
-    sshx 
+    tmate
