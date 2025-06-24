@@ -17,4 +17,4 @@ EXPOSE 8080
 
 # Start dummy HTTP server and sshx (foreground process)
 CMD python3 -m http.server 8080 & \
-    sshx serve --once
+    sshx 
